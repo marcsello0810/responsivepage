@@ -1,27 +1,84 @@
 *{
 box-sizing: border-box;
+font-family:Helvetica;
+border-color: #E07A5F;
+
 }
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #3D405B; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #F4F1DE;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+.sidebutton {
+    background-color:#F4F1DE;
+    color: white;
+    border:none;
+    width: 50px;
+    height: 50px;
+    float: right;
+}
+
+
 .menu {
 float:left;
 width:20%;
 text-align:center;
 }
-.menu a {
-background-color:#e5e5e5;
+.menu b:hover{
+    background-color: #3D405B;
+    color: #F4F1DE;
+}
+.menu a, b {
+background: none;
+background-clip:border-box;
 padding:8px;
-margin-top:7px;
+margin-top:4px;
 display:block;
 width:100%;
 color:black;
+border-style:solid;
+border-radius: 10px / 10px;
+font-weight:bolder;
+border-color: #3D405B;
 }
 .main {
 float:left;
 width:60%;
 padding:0 20px;
+
 }
 .right {
-background-color:#e5e5e5;
-float:left;
+background-image: url(light-bulb-with-drawing-graph.jpg);
+background-size: cover;
+border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
+float:right;
 width:20%;
 padding:15px;
 margin-top:7px;
@@ -29,18 +86,125 @@ text-align:center;
 }
 @media only screen and (max-width:620px) {
 /* For mobile phones: */
-.menu, .main, .right {
-    width:100%;
-}
+    .second, .menu, .main, .right {
+        visibility:hidden;
+        float:none;
+        height: 0px;
+        width: 100%; 
+    }
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+    .third {
+        width: 100%;
+        float: left;
+        color: #F4F1DE;
+        background-image: url(businessman-with-light-bulb-his-hand.jpg);
+        background-size: cover;
+        text-align: center;
+    }
+    .fourth {
+        background-image: url(hands-table-during-business-meeting.jpg);
+        background-size: cover;
+        float: left;
+        width: 100%;
+        margin: 2px;
+        padding: 10px;
+        text-align: left;
+    }
 }
 body {
-    font-family:Helvetica;color:#aaaaaa;
-}
-.mmr {
-    background-color:#e5e5e5;
-    padding:15px;
-    text-align:center;
-    overflow:auto;
-    border: lightseagreen;
+    background-color: #F4F1DE;
+    color: #3D405B;
     
+}
+@media only screen and (min-width:620px) and (max-width:1200px) {
+    .sidenav {
+        visibility: hidden;
+    }
+    .sidebutton {
+        visibility: hidden;
+    }
+    .first {
+        float: none;
+        
+    }
+    .second{
+        width: 100%;
+        float: left;
+        
+    }
+
+    .third {
+        color: #F4F1DE;
+        background-image: url(businessman-with-light-bulb-his-hand.jpg);
+        background-size: cover;
+        float: left;
+        width: 100%;
+        height: 600px;
+        margin: 2px;
+        padding: 200px;
+        text-align: center;
+
+        
+    }
+    .fourth {
+        background-image: url(hands-table-during-business-meeting.jpg);
+        background-size: cover;
+        float: left;
+        width: 100%;
+        margin: 2px;
+        padding: 10px;
+        text-align: left;
+    }
+
+}
+@media only screen and (min-width:1200px){
+    .sidenav {
+        visibility: hidden;
+    }
+    .sidebutton {
+        visibility: hidden;
+    }
+    .menu, .menu b  {
+        height: 40%;
+        width: 100%;
+        display: inline;
+        
+    }
+    .first {
+        float: none;
+    }
+    .second{
+        width: 100%;
+        float: left;
+        
+    }
+
+    .third {
+        color: #F4F1DE;
+        background-image: url(businessman-with-light-bulb-his-hand.jpg);
+        background-size: cover;
+        float: left;
+        width: 100%;
+        height: 600px;
+        margin: 2px;
+        padding: 200px;
+        text-align: center;
+
+        
+    }
+    .fourth {
+        background-image: url(hands-table-during-business-meeting.jpg);
+        background-size: cover;
+        float: left;
+        width: 100%;
+        margin: 2px;
+        padding: 10px;
+        text-align: left;
+    }
+
 }
